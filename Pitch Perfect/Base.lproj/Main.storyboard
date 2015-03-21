@@ -161,11 +161,22 @@
                                     <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Z8Y-bn-acD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIQ-tf-i1f">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="pause">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="u7z-4N-l59"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="eQD-mR-VJK" secondAttribute="centerX" id="G70-cU-8K0"/>
+                            <constraint firstAttribute="centerX" secondItem="IIQ-tf-i1f" secondAttribute="centerX" id="buV-fK-PE6"/>
                             <constraint firstAttribute="centerX" secondItem="gkB-ar-tM7" secondAttribute="centerX" id="dEd-fT-4Q5"/>
+                            <constraint firstItem="Rdv-io-wP5" firstAttribute="top" secondItem="IIQ-tf-i1f" secondAttribute="bottom" constant="16" id="lQ9-w2-2rj"/>
                             <constraint firstAttribute="centerY" secondItem="gkB-ar-tM7" secondAttribute="centerY" id="lXX-T6-uLX"/>
                             <constraint firstAttribute="centerX" secondItem="Rdv-io-wP5" secondAttribute="centerX" id="q22-RL-N3p"/>
                             <constraint firstAttribute="bottom" secondItem="Rdv-io-wP5" secondAttribute="bottom" constant="20" symbolic="YES" id="wIa-e9-Q8q"/>
@@ -176,14 +187,17 @@
                                 <exclude reference="gkB-ar-tM7"/>
                                 <exclude reference="eQD-mR-VJK"/>
                                 <exclude reference="Rdv-io-wP5"/>
+                                <exclude reference="IIQ-tf-i1f"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="G70-cU-8K0"/>
-                                <exclude reference="ztJ-12-J6f"/>
-                                <exclude reference="q22-RL-N3p"/>
-                                <exclude reference="wIa-e9-Q8q"/>
                                 <exclude reference="dEd-fT-4Q5"/>
                                 <exclude reference="lXX-T6-uLX"/>
+                                <exclude reference="G70-cU-8K0"/>
+                                <exclude reference="ztJ-12-J6f"/>
+                                <exclude reference="buV-fK-PE6"/>
+                                <exclude reference="lQ9-w2-2rj"/>
+                                <exclude reference="q22-RL-N3p"/>
+                                <exclude reference="wIa-e9-Q8q"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -191,19 +205,23 @@
                                 <include reference="gkB-ar-tM7"/>
                                 <include reference="eQD-mR-VJK"/>
                                 <include reference="Rdv-io-wP5"/>
+                                <include reference="IIQ-tf-i1f"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="G70-cU-8K0"/>
-                                <include reference="ztJ-12-J6f"/>
-                                <include reference="q22-RL-N3p"/>
-                                <include reference="wIa-e9-Q8q"/>
                                 <include reference="dEd-fT-4Q5"/>
                                 <include reference="lXX-T6-uLX"/>
+                                <include reference="G70-cU-8K0"/>
+                                <include reference="ztJ-12-J6f"/>
+                                <include reference="buV-fK-PE6"/>
+                                <include reference="lQ9-w2-2rj"/>
+                                <include reference="q22-RL-N3p"/>
+                                <include reference="wIa-e9-Q8q"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="sec-lh-mgT"/>
                     <connections>
+                        <outlet property="pauseButton" destination="IIQ-tf-i1f" id="bEK-0j-zCg"/>
                         <outlet property="recordButton" destination="gkB-ar-tM7" id="Twb-9U-MSh"/>
                         <outlet property="recordingInProgress" destination="eQD-mR-VJK" id="a95-Rt-8wm"/>
                         <outlet property="stopButton" destination="Rdv-io-wP5" id="Yzs-qj-cjo"/>
@@ -237,6 +255,7 @@
         <image name="chipmunk" width="100" height="100"/>
         <image name="darth" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
+        <image name="pause" width="50" height="50"/>
         <image name="rabbit" width="113" height="100"/>
         <image name="snail" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
