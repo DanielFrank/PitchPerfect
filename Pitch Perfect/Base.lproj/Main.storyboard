@@ -63,13 +63,24 @@
                                     <action selector="playDarthVaderAudio:" destination="cue-PI-rIp" eventType="touchUpInside" id="Svd-lC-WwI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noJ-tH-zRw">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="cathedral">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playCathedralAudio:" destination="cue-PI-rIp" eventType="touchUpInside" id="kkn-xK-pYP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="c7s-vo-LyI" secondAttribute="trailing" constant="30" id="3xa-7o-Ln1"/>
                             <constraint firstItem="M5a-9D-mGw" firstAttribute="top" secondItem="Jgf-dJ-Qia" secondAttribute="bottom" constant="150" id="7f9-md-QqO"/>
+                            <constraint firstAttribute="centerY" secondItem="noJ-tH-zRw" secondAttribute="centerY" id="MEw-b5-CM2"/>
                             <constraint firstItem="Jgf-dJ-Qia" firstAttribute="top" secondItem="HCW-Eq-Pz9" secondAttribute="bottom" constant="50" id="MYo-iY-o5Y"/>
                             <constraint firstItem="M5a-9D-mGw" firstAttribute="leading" secondItem="aCk-st-YP4" secondAttribute="leadingMargin" constant="30" id="OQC-Iu-5lR"/>
+                            <constraint firstAttribute="centerX" secondItem="noJ-tH-zRw" secondAttribute="centerX" id="Qk0-S3-Ydz"/>
                             <constraint firstItem="c7s-vo-LyI" firstAttribute="top" secondItem="HCW-Eq-Pz9" secondAttribute="bottom" constant="50" id="S1F-Us-2ZM"/>
                             <constraint firstItem="Jgf-dJ-Qia" firstAttribute="leading" secondItem="aCk-st-YP4" secondAttribute="leadingMargin" constant="30" id="lEb-3b-cMZ"/>
                             <constraint firstItem="fdG-ip-7qH" firstAttribute="top" secondItem="c7s-vo-LyI" secondAttribute="bottom" constant="150" id="oWS-AG-owY"/>
@@ -84,12 +95,15 @@
                                 <exclude reference="c7s-vo-LyI"/>
                                 <exclude reference="M5a-9D-mGw"/>
                                 <exclude reference="fdG-ip-7qH"/>
+                                <exclude reference="noJ-tH-zRw"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="MYo-iY-o5Y"/>
                                 <exclude reference="lEb-3b-cMZ"/>
                                 <exclude reference="3xa-7o-Ln1"/>
                                 <exclude reference="S1F-Us-2ZM"/>
+                                <exclude reference="MEw-b5-CM2"/>
+                                <exclude reference="Qk0-S3-Ydz"/>
                                 <exclude reference="7f9-md-QqO"/>
                                 <exclude reference="OQC-Iu-5lR"/>
                                 <exclude reference="oWS-AG-owY"/>
@@ -105,12 +119,15 @@
                                 <include reference="c7s-vo-LyI"/>
                                 <include reference="M5a-9D-mGw"/>
                                 <include reference="fdG-ip-7qH"/>
+                                <include reference="noJ-tH-zRw"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="MYo-iY-o5Y"/>
                                 <include reference="lEb-3b-cMZ"/>
                                 <include reference="3xa-7o-Ln1"/>
                                 <include reference="S1F-Us-2ZM"/>
+                                <include reference="MEw-b5-CM2"/>
+                                <include reference="Qk0-S3-Ydz"/>
                                 <include reference="7f9-md-QqO"/>
                                 <include reference="OQC-Iu-5lR"/>
                                 <include reference="oWS-AG-owY"/>
@@ -190,14 +207,14 @@
                                 <exclude reference="IIQ-tf-i1f"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="dEd-fT-4Q5"/>
-                                <exclude reference="lXX-T6-uLX"/>
                                 <exclude reference="G70-cU-8K0"/>
                                 <exclude reference="ztJ-12-J6f"/>
                                 <exclude reference="buV-fK-PE6"/>
                                 <exclude reference="lQ9-w2-2rj"/>
                                 <exclude reference="q22-RL-N3p"/>
                                 <exclude reference="wIa-e9-Q8q"/>
+                                <exclude reference="dEd-fT-4Q5"/>
+                                <exclude reference="lXX-T6-uLX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -208,14 +225,14 @@
                                 <include reference="IIQ-tf-i1f"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="dEd-fT-4Q5"/>
-                                <include reference="lXX-T6-uLX"/>
                                 <include reference="G70-cU-8K0"/>
                                 <include reference="ztJ-12-J6f"/>
                                 <include reference="buV-fK-PE6"/>
                                 <include reference="lQ9-w2-2rj"/>
                                 <include reference="q22-RL-N3p"/>
                                 <include reference="wIa-e9-Q8q"/>
+                                <include reference="dEd-fT-4Q5"/>
+                                <include reference="lXX-T6-uLX"/>
                             </mask>
                         </variation>
                     </view>
@@ -252,6 +269,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cathedral" width="100" height="100"/>
         <image name="chipmunk" width="100" height="100"/>
         <image name="darth" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
